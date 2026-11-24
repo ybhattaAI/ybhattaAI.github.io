@@ -7,17 +7,12 @@
 <meta name="description" content="Yubaraj Bhatta — Senior Software Engineer: Java, Spring Boot, microservices, cloud and generative AI. Dallas, Texas.">
 <meta property="og:title" content="Yubaraj Bhatta — Senior Software Engineer">
 <meta property="og:description" content="Java • Spring Boot • Microservices • Generative AI • MCP">
-<meta property="og:url" content="https://www.ybhatta.com/">
+<meta property="og:url" content="https://ybhattaai.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141517'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ff4f00'%3EYB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* VOICE: confident, precise, engineer's calm — few words, fine detail.
-   IDEA: a precision instrument panel reading out a career; the system he builds is the dial.
-   PICTURE: a live microservice mesh — UI → gateway → Spring Boot services → data, with an AI/MCP node feeding context; packets travel the wires.
-   COLOUR and TYPE: aluminium #e9eaec, black ink, orange #ff4f00 pointer; night #141517. Geist 600 + Geist, Geist Mono for readouts.
-   LAYOUT: hero composition with mesh; a long horizontal career scale with a readout; filterable skills; education; contact. */
 :root{color-scheme:light dark;
  --bg:light-dark(#e9eaec,#141517);--panel:light-dark(#f6f6f7,#1c1d20);--ink:light-dark(#0d0e10,#ececee);
  --mute:light-dark(#5b5f66,#9a9ea6);--line:light-dark(#c9cbcf,#2c2e33);--acc:#ff4f00;--accInk:light-dark(#c23a00,#ff7a3d);
@@ -33,7 +28,6 @@ a{color:inherit}
 h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance;font-weight:600;letter-spacing:-.02em}
 h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
 .lede{color:var(--mute);max-width:62ch;margin:0 0 32px;font-size:17px}
-/* nav */
 nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);flex-wrap:wrap}
 .logo{font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -41,7 +35,6 @@ nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);fl
 .links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
 .links a{text-decoration:none;color:var(--mute);padding:10px 12px;border-radius:8px;font-size:15px}
 .links a:hover,.links a.on{color:var(--ink);background:var(--panel)}
-/* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);align-items:center;padding-top:clamp(32px,5vw,64px)}
 .tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--mute);margin-bottom:20px}
 .tag b{width:8px;height:8px;border-radius:50%;background:#1fbf5f;box-shadow:0 0 0 4px rgba(31,191,95,.18)}
@@ -60,13 +53,11 @@ nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);fl
 .fig>svg{position:absolute;inset:0;width:100%;height:100%}
 .fig .cap{position:absolute;left:16px;bottom:12px;font-size:13px;color:var(--mute);z-index:2;pointer-events:none}
 .fig .hint{position:absolute;right:14px;top:12px;font-size:13px;color:var(--mute);z-index:2}
-/* stats */
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(36px,5vw,64px)}
 .stat{padding:22px 18px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
 .stat b{display:block;font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1}
 .stat span{color:var(--mute);font-size:14px}
-/* career scale */
 .dark{background:#141517;color:#ececee;--mute:#9a9ea6;--line:#2c2e33;--panel:#1c1d20}
 .scale{position:relative;margin:8px 0 0;padding-top:34px}
 .ticks{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));font-size:13px;color:var(--mute)}
@@ -89,14 +80,12 @@ nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);fl
 .readout li::marker{color:var(--acc)}
 .navbtns{display:flex;gap:8px;margin-top:20px}
 .navbtns .btn{background:transparent;color:#ececee;border-color:#3a3d44}
-/* AI */
 .ai{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--shadow)}
 .card svg{width:36px;height:36px;margin-bottom:14px}
 .card h3{font-size:19px;margin-bottom:8px}
 .card p{margin:0;color:var(--mute);font-size:15px}
-/* skills */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .chip{min-height:44px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 15px Geist,sans-serif;cursor:pointer}
 .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -108,7 +97,6 @@ nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);fl
 @keyframes pop{from{opacity:0;transform:translateY(6px) scale(.96)}}
 .search{min-height:46px;width:min(100%,320px);border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:16px Geist,sans-serif;padding:0 14px;margin-bottom:14px}
 .search:focus{outline:3px solid var(--acc);outline-offset:1px}
-/* industries + edu */
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
 .edu{border-top:1px solid var(--line);padding:20px 0}
 .edu:last-child{border-bottom:1px solid var(--line)}
@@ -119,7 +107,6 @@ nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);fl
 .ind div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
 .ind b{display:block;font-size:17px;margin-bottom:4px}
 .ind span{color:var(--mute);font-size:14px}
-/* contact */
 .contact{background:var(--acc);color:#fff}
 .contact .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:end}
 .contact h2{font-size:clamp(36px,5.5vw,64px)}
@@ -142,7 +129,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <nav><div class="wrap">
  <a class="logo" href="#top"><i>YB</i>Yubaraj Bhatta</a>
  <div class="links">
-  <a href="#career">Career</a><a href="#ai">AI work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  <a href="#career">Career</a><a href="#ai">AI work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a><a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
  </div>
 </div></nav>
 
@@ -192,7 +179,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section class="band" id="skills" style="padding-top:0"><div class="wrap reveal">
  <h2>Technical skills</h2>
  <p class="lede">Filter by area or search for a tool.</p>
- <input class="search" id="q" type="search" placeholder="Search skills, e.g. Kafka, Angular" aria-label="Search skills">
+ <input class="search" id="q" type="search" placeholder="Search skills, e.g. Spring, Angular" aria-label="Search skills">
  <div class="chips" id="chips"></div>
  <div class="cloud" id="cloud"></div>
 </div></section>
@@ -225,10 +212,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="crow"><span>ybhatta.ai@gmail.com<br><small>Email</small></span><button class="copy" id="copyBtn" type="button">Copy email</button></div>
   <a class="crow" href="mailto:ybhatta.ai@gmail.com"><span>Write an email<br><small>Opens your mail app</small></span><span aria-hidden="true">→</span></a>
   <a class="crow" href="https://www.linkedin.com/in/ybhatta95" target="_blank" rel="noopener"><span>linkedin.com/in/ybhatta95<br><small>LinkedIn</small></span><span aria-hidden="true">↗</span></a>
-  <a class="crow" href="https://github.com/ybhatta" target="_blank" rel="noopener"><span>github.com/ybhatta<br><small>GitHub</small></span><span aria-hidden="true">↗</span></a>
+  <a class="crow" href="https://github.com/ybhattaAI" target="_blank" rel="noopener"><span>github.com/ybhattaAI<br><small>GitHub</small></span><span aria-hidden="true">↗</span></a>
  </div>
 </div></section>
-<footer><div class="wrap"><span>© <span id="yr"></span> Yubaraj Bhatta</span><span class="mono">www.ybhatta.com</span></div></footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> Yubaraj Bhatta</span><a class="mono" href="resume.pdf" target="_blank" rel="noopener">résumé</a></div></footer>
 
 <script>
 {
@@ -236,7 +223,6 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 $('#yr').textContent=new Date().getFullYear();
 
-/* typed role */
 const roles=['Java & Spring Boot','Microservices','Generative AI & MCP','AWS · Azure · Kubernetes','Angular front ends'];
 let ri=0,ci=0,del=false;const typed=$('#typed');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -249,7 +235,6 @@ const tick=()=>{const w=roles[ri];
  del=false;ri=(ri+1)%roles.length;setTimeout(tick,250)};
 tick();
 
-/* mesh diagram */
 const nodes=[
  {id:'ui',l:'Angular UI',x:.13,y:.22,d:'Responsive Angular interfaces for customers and internal users'},
  {id:'ai',l:'AI + MCP',x:.13,y:.74,d:'MCP servers connect AI assistants to repos, docs, databases and tickets',hot:1},
@@ -277,7 +262,6 @@ const draw=()=>{const W=svg.clientWidth,H=svg.clientHeight,sm=W<480,nw=sm?86:112
    g.querySelector('.nb').setAttribute('stroke',N[id].hot?'var(--acc)':'var(--line)');cap.textContent='system.status: all services healthy'};
   g.addEventListener('mouseenter',on);g.addEventListener('focus',on);g.addEventListener('click',on);g.addEventListener('mouseleave',off);g.addEventListener('blur',off)})};
 const meshRO=new ResizeObserver(draw);meshRO.observe(svg);
-/* travelling packets */
 const spawn=()=>{const i=Math.floor(Math.random()*edges.length);pk.push({i,t:0,s:.006+Math.random()*.008})};
 const loop=()=>{const g=svg.querySelector('#pk');if(g){
   if(pk.length<9&&Math.random()<.06)spawn();
@@ -287,12 +271,10 @@ const loop=()=>{const g=svg.querySelector('#pk');if(g){
  requestAnimationFrame(loop)};
 if(!reduce)requestAnimationFrame(loop);
 
-/* stats count-up */
 const countIO=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const b=en.target,n=+b.dataset.n;let v=0;
  const st=()=>{v++;b.textContent=v+(v===n&&n===7?'+':'');if(v<n)setTimeout(st,reduce?0:900/n)};st();countIO.unobserve(b)}),{threshold:.6});
 document.querySelectorAll('[data-n]').forEach(b=>countIO.observe(b));
 
-/* career scale */
 const jobs=[
  {co:'Sonic Healthcare',t:'Java Developer',loc:'Richardson, TX',from:2018+2/12,to:2019+12/12,dates:'Mar 2018 – Dec 2019',
   tech:['Spring MVC','Hibernate/JPA','Spring Batch','SOAP','MySQL','jQuery','Tomcat'],
@@ -323,7 +305,6 @@ const pick=i=>{cur=(i+jobs.length)%jobs.length;const j=jobs[cur];
 pick(cur);
 $('#scale').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){pick(cur-1);$('#seg'+cur).focus()}if(e.key==='ArrowRight'){pick(cur+1);$('#seg'+cur).focus()}});
 
-/* AI cards */
 const ico=p=>`<svg viewBox="0 0 36 36" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
 const ai=[
  [ico('<rect x="5" y="7" width="26" height="22" rx="4"/><path d="M11 15l4 3-4 3M18 22h7"/>'),'Greenfield, faster','Scaffold new microservices from requirements — API contracts, data models, service layers and unit tests.'],
@@ -332,7 +313,6 @@ const ai=[
  [ico('<path d="M18 5l11 5v8c0 7-5 11-11 13-6-2-11-6-11-13v-8z"/><path d="M13 18l4 4 6-7"/>'),'Team standards','Reusable prompt templates and guidelines for AI-generated code review, security checks and test coverage.']];
 $('#aiCards').innerHTML=ai.map(([i,h,p])=>`<div class="card">${i}<h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('');
 
-/* skills */
 const skills={
  'Generative AI':['Prompt engineering','GitHub Copilot','Claude','ChatGPT','MCP servers','AI code generation','AI refactoring','AI-generated tests & docs'],
  'Languages':['Java 8–25','Python','JavaScript','TypeScript','SQL','C++','C'],
@@ -353,12 +333,10 @@ $('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b
 $('#q').addEventListener('input',renderCloud);
 renderChips();renderCloud();
 
-/* copy email */
 $('#copyBtn').addEventListener('click',async e=>{const b=e.currentTarget;
  try{await navigator.clipboard.writeText('ybhatta.ai@gmail.com');b.textContent='Copied ✓'}catch(err){b.textContent='Select & copy above'}
  setTimeout(()=>b.textContent='Copy email',2000)});
 
-/* reveal + active nav */
 const revIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');revIO.unobserve(en.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>revIO.observe(el));
 const navIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
