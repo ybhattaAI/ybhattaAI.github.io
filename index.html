@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yubaraj Bhatta</title>
+<meta name="description" content="Yubaraj Bhatta — Senior Software Engineer: Java, Spring Boot, microservices, cloud and generative AI. Dallas, Texas.">
+<meta property="og:title" content="Yubaraj Bhatta — Senior Software Engineer">
+<meta property="og:description" content="Java • Spring Boot • Microservices • Generative AI • MCP">
+<meta property="og:url" content="https://www.ybhatta.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141517'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ff4f00'%3EYB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: confident, precise, engineer's calm — few words, fine detail.
+   IDEA: a precision instrument panel reading out a career; the system he builds is the dial.
+   PICTURE: a live microservice mesh — UI → gateway → Spring Boot services → data, with an AI/MCP node feeding context; packets travel the wires.
+   COLOUR and TYPE: aluminium #e9eaec, black ink, orange #ff4f00 pointer; night #141517. Geist 600 + Geist, Geist Mono for readouts.
+   LAYOUT: hero composition with mesh; a long horizontal career scale with a readout; filterable skills; education; contact. */
+:root{color-scheme:light dark;
+ --bg:light-dark(#e9eaec,#141517);--panel:light-dark(#f6f6f7,#1c1d20);--ink:light-dark(#0d0e10,#ececee);
+ --mute:light-dark(#5b5f66,#9a9ea6);--line:light-dark(#c9cbcf,#2c2e33);--acc:#ff4f00;--accInk:light-dark(#c23a00,#ff7a3d);
+ --node:light-dark(#ffffff,#22242a);--shadow:light-dark(rgba(20,22,28,.12),rgba(0,0,0,.45))}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Geist,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:clip}
+a{color:inherit}
+.mono{font-family:"Geist Mono",ui-monospace,Menlo,monospace}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance;font-weight:600;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
+.lede{color:var(--mute);max-width:62ch;margin:0 0 32px;font-size:17px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);flex-wrap:wrap}
+.logo{font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--acc);display:grid;place-items:center;font-style:normal;font-size:13px}
+.links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--mute);padding:10px 12px;border-radius:8px;font-size:15px}
+.links a:hover,.links a.on{color:var(--ink);background:var(--panel)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);align-items:center;padding-top:clamp(32px,5vw,64px)}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--mute);margin-bottom:20px}
+.tag b{width:8px;height:8px;border-radius:50%;background:#1fbf5f;box-shadow:0 0 0 4px rgba(31,191,95,.18)}
+.hero h1{font-size:clamp(44px,7vw,84px);margin-bottom:16px}
+.role{font-size:clamp(18px,2vw,22px);font-weight:500;margin:0 0 6px;min-height:1.6em}
+.role .cur{color:var(--acc)}
+.caret{display:inline-block;width:2px;height:1em;background:var(--acc);vertical-align:-2px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.sum{color:var(--mute);max-width:56ch;margin:18px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:10px;font:600 15px Geist,sans-serif;text-decoration:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;transition:transform .15s,border-color .15s}
+.btn:hover{transform:translateY(-2px);border-color:var(--ink)}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn:focus-visible,.chip:focus-visible,.seg:focus-visible,.links a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.fig{position:relative;min-height:420px;border-radius:20px;background:var(--panel);border:1px solid var(--line);box-shadow:0 30px 60px -30px var(--shadow);overflow:hidden}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.fig .cap{position:absolute;left:16px;bottom:12px;font-size:13px;color:var(--mute);z-index:2;pointer-events:none}
+.fig .hint{position:absolute;right:14px;top:12px;font-size:13px;color:var(--mute);z-index:2}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(36px,5vw,64px)}
+.stat{padding:22px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.stat span{color:var(--mute);font-size:14px}
+/* career scale */
+.dark{background:#141517;color:#ececee;--mute:#9a9ea6;--line:#2c2e33;--panel:#1c1d20}
+.scale{position:relative;margin:8px 0 0;padding-top:34px}
+.ticks{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));font-size:13px;color:var(--mute)}
+.ticks span{border-left:1px solid var(--line);padding:0 0 10px 6px;position:relative}
+.track{position:relative;height:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px calc(100%/108))}
+.seg{position:absolute;top:10px;bottom:10px;border-radius:8px;border:1px solid #3a3d44;background:#22242a;color:#ececee;font:500 13px Geist,sans-serif;cursor:pointer;padding:0 10px;text-align:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:background .2s,border-color .2s}
+.seg:hover{border-color:#ececee}
+.seg.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.pointer{position:absolute;top:-26px;width:2px;height:calc(100% + 26px);background:var(--acc);transition:left .45s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.pointer::before{content:"";position:absolute;top:0;left:-6px;border:7px solid transparent;border-top-color:var(--acc)}
+.readout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(20px,4vw,56px);margin-top:36px}
+.readout .co{font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.readout .meta{color:var(--mute);margin:8px 0 16px}
+.readout .ttl{color:#ff7a3d;font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:13px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:#c9ccd2}
+.readout h3{font-size:15px;font-weight:600;margin:0 0 6px;color:#ececee}
+.readout ul{margin:0 0 18px;padding-left:18px;color:#c9ccd2}
+.readout li{margin:5px 0}
+.readout li::marker{color:var(--acc)}
+.navbtns{display:flex;gap:8px;margin-top:20px}
+.navbtns .btn{background:transparent;color:#ececee;border-color:#3a3d44}
+/* AI */
+.ai{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--shadow)}
+.card svg{width:36px;height:36px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{margin:0;color:var(--mute);font-size:15px}
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{min-height:44px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 15px Geist,sans-serif;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip small{color:var(--mute);margin-left:4px}
+.chip.on small{color:inherit;opacity:.7}
+.cloud{display:flex;flex-wrap:wrap;gap:10px;min-height:120px}
+.sk{padding:9px 14px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:15px;animation:pop .35s both}
+.sk em{font-style:normal;color:var(--mute);font-size:12px;margin-left:8px}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.96)}}
+.search{min-height:46px;width:min(100%,320px);border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:16px Geist,sans-serif;padding:0 14px;margin-bottom:14px}
+.search:focus{outline:3px solid var(--acc);outline-offset:1px}
+/* industries + edu */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.edu{border-top:1px solid var(--line);padding:20px 0}
+.edu:last-child{border-bottom:1px solid var(--line)}
+.edu .yr{float:right;color:var(--accInk);font-weight:600}
+.edu h3{font-size:20px;margin-bottom:6px}
+.edu p{margin:0;color:var(--mute)}
+.ind{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ind div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ind b{display:block;font-size:17px;margin-bottom:4px}
+.ind span{color:var(--mute);font-size:14px}
+/* contact */
+.contact{background:var(--acc);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:end}
+.contact h2{font-size:clamp(36px,5.5vw,64px)}
+.contact p{opacity:.9;max-width:50ch}
+.cbox{display:grid;gap:10px}
+.crow{display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(0,0,0,.14);border-radius:12px;padding:12px 14px;text-decoration:none;font-weight:500;flex-wrap:wrap}
+.crow:hover{background:rgba(0,0,0,.24)}
+.crow small{opacity:.8;font-weight:400}
+.copy{min-height:44px;border:0;border-radius:8px;background:#fff;color:#141517;font:600 14px Geist,sans-serif;padding:0 14px;cursor:pointer}
+footer{padding:24px max(5vw,16px);font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.hero,.readout,.two,.contact .wrap{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:600px){.links{display:none}.fig{min-height:340px}.ticks span:nth-child(even){color:transparent}.seg{font-size:0;padding:0}.ind{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <a class="logo" href="#top"><i>YB</i>Yubaraj Bhatta</a>
+ <div class="links">
+  <a href="#career">Career</a><a href="#ai">AI work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+ </div>
+</div></nav>
+
+<header class="band" id="top"><div class="wrap">
+ <div class="hero">
+  <div>
+   <div class="tag"><b></b>Dallas, Texas · open to technical leadership roles</div>
+   <h1>Yubaraj Bhatta</h1>
+   <p class="role">Senior Software Engineer — <span class="cur" id="typed"></span><span class="caret"></span></p>
+   <p class="sum">I build and run Java and Spring Boot microservices, Angular front ends, and cloud systems on AWS, Azure and Kubernetes. I use generative AI and MCP across the whole development lifecycle to ship new services faster and modernize older code safely. I hold an MBA and I'm moving toward technical leadership.</p>
+   <div class="cta">
+    <a class="btn pri" href="#contact">Get in touch</a>
+    <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
+    <a class="btn" href="https://www.linkedin.com/in/ybhatta95" target="_blank" rel="noopener">LinkedIn</a>
+   </div>
+  </div>
+  <div class="fig" id="mesh">
+   <svg id="meshSvg" role="img" aria-label="Diagram of a microservice system: Angular UI, API gateway, Spring Boot services, data stores, Kubernetes and an AI assistant connected through MCP"></svg>
+   <span class="hint">Hover a node</span>
+   <span class="cap mono" id="meshCap">system.status: all services healthy</span>
+  </div>
+ </div>
+ <div class="stats">
+  <div class="stat"><b data-n="7">0</b><span>years in software engineering</span></div>
+  <div class="stat"><b data-n="4">0</b><span>companies, from healthcare to payments</span></div>
+  <div class="stat"><b data-n="8">0</b><span>languages, Java 8 through 25</span></div>
+  <div class="stat"><b>MBA</b><span>accounting concentration, 2026</span></div>
+ </div>
+</div></header>
+
+<section class="band dark" id="career"><div class="wrap reveal">
+ <h2>Career, on one scale</h2>
+ <p class="lede">Eight years from Java developer to senior engineer. Pick a role on the scale, or use the arrow keys.</p>
+ <div class="scale" id="scale">
+  <div class="ticks" id="ticks"></div>
+  <div class="track" id="track"><div class="pointer" id="pointer"></div></div>
+ </div>
+ <div class="readout" id="readout" aria-live="polite"></div>
+</div></section>
+
+<section class="band" id="ai"><div class="wrap reveal">
+ <h2>Generative AI in the engineering loop</h2>
+ <p class="lede">At Accurate Background I lead AI-assisted development for the team — from requirements to tested, reviewed code.</p>
+ <div class="ai" id="aiCards"></div>
+</div></section>
+
+<section class="band" id="skills" style="padding-top:0"><div class="wrap reveal">
+ <h2>Technical skills</h2>
+ <p class="lede">Filter by area or search for a tool.</p>
+ <input class="search" id="q" type="search" placeholder="Search skills, e.g. Kafka, Angular" aria-label="Search skills">
+ <div class="chips" id="chips"></div>
+ <div class="cloud" id="cloud"></div>
+</div></section>
+
+<section class="band" id="education" style="padding-top:0"><div class="wrap two reveal">
+ <div>
+  <h2>Education</h2>
+  <p class="lede">An engineering foundation with a business lens.</p>
+  <div class="edu"><span class="yr">2026</span><h3>Master of Business Administration</h3><p>Accounting concentration · Pittsburg State University, Pittsburg, KS</p></div>
+  <div class="edu"><span class="yr">2019</span><h3>B.S. in Computer Science</h3><p>Minor in Mathematics · University of Texas at Arlington, Arlington, TX</p></div>
+ </div>
+ <div>
+  <h2>Industries</h2>
+  <p class="lede">Systems built for regulated, high-volume businesses.</p>
+  <div class="ind">
+   <div><b>Background screening</b><span>Accurate Background — high-volume check workflows</span></div>
+   <div><b>Telecom</b><span>AT&amp;T — org-wide microservices and REST APIs</span></div>
+   <div><b>Payments</b><span>Mastercard — secure services, cloud migration</span></div>
+   <div><b>Healthcare</b><span>Sonic Healthcare — web apps and batch processing</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="band contact" id="contact"><div class="wrap">
+ <div>
+  <h2>Let's build something.</h2>
+  <p>Open to senior engineering and technical leadership conversations, AI-assisted engineering work, and teaching opportunities.</p>
+ </div>
+ <div class="cbox">
+  <div class="crow"><span>ybhatta.ai@gmail.com<br><small>Email</small></span><button class="copy" id="copyBtn" type="button">Copy email</button></div>
+  <a class="crow" href="mailto:ybhatta.ai@gmail.com"><span>Write an email<br><small>Opens your mail app</small></span><span aria-hidden="true">→</span></a>
+  <a class="crow" href="https://www.linkedin.com/in/ybhatta95" target="_blank" rel="noopener"><span>linkedin.com/in/ybhatta95<br><small>LinkedIn</small></span><span aria-hidden="true">↗</span></a>
+  <a class="crow" href="https://github.com/ybhatta" target="_blank" rel="noopener"><span>github.com/ybhatta<br><small>GitHub</small></span><span aria-hidden="true">↗</span></a>
+ </div>
+</div></section>
+<footer><div class="wrap"><span>© <span id="yr"></span> Yubaraj Bhatta</span><span class="mono">www.ybhatta.com</span></div></footer>
+
+<script>
+{
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('#yr').textContent=new Date().getFullYear();
+
+/* typed role */
+const roles=['Java & Spring Boot','Microservices','Generative AI & MCP','AWS · Azure · Kubernetes','Angular front ends'];
+let ri=0,ci=0,del=false;const typed=$('#typed');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const tick=()=>{const w=roles[ri];
+ if(reduce){typed.textContent=w;ri=(ri+1)%roles.length;return setTimeout(tick,2200)}
+ typed.textContent=w.slice(0,ci);
+ if(!del&&ci<w.length){ci++;return setTimeout(tick,70)}
+ if(!del){del=true;return setTimeout(tick,1600)}
+ if(ci>0){ci--;return setTimeout(tick,35)}
+ del=false;ri=(ri+1)%roles.length;setTimeout(tick,250)};
+tick();
+
+/* mesh diagram */
+const nodes=[
+ {id:'ui',l:'Angular UI',x:.13,y:.22,d:'Responsive Angular interfaces for customers and internal users'},
+ {id:'ai',l:'AI + MCP',x:.13,y:.74,d:'MCP servers connect AI assistants to repos, docs, databases and tickets',hot:1},
+ {id:'gw',l:'REST API',x:.40,y:.48,d:'REST and SOAP APIs, secured with Spring Security'},
+ {id:'s1',l:'Spring Boot',x:.66,y:.18,d:'Microservices powering high-volume background-check workflows'},
+ {id:'s2',l:'Batch / JMS',x:.66,y:.50,d:'Spring Batch jobs, JMS, SQS and Kinesis messaging'},
+ {id:'k8',l:'Kubernetes',x:.66,y:.82,d:'Containerized services on Kubernetes (Rancher) with Jenkins CI/CD'},
+ {id:'db',l:'MongoDB · SQL',x:.89,y:.32,d:'MongoDB, Oracle, MySQL and SQL Server schemas and queries'},
+ {id:'s3',l:'AWS S3',x:.89,y:.70,d:'Large-scale document storage on AWS S3; Datadog & Kibana monitoring'}];
+const edges=[['ui','gw'],['ai','gw'],['ai','ui'],['gw','s1'],['gw','s2'],['gw','k8'],['s1','db'],['s2','db'],['s2','s3'],['k8','s3'],['s1','k8']];
+const svg=$('#meshSvg'),cap=$('#meshCap'),N=Object.fromEntries(nodes.map(n=>[n.id,n]));
+let pk=[];
+const draw=()=>{const W=svg.clientWidth,H=svg.clientHeight,sm=W<480,nw=sm?86:112,nh=sm?34:40;
+ const P=n=>[Math.min(Math.max(n.x*W,nw/2+8),W-nw/2-8),Math.min(Math.max(n.y*H,nh/2+30),H-nh/2-30)];
+ let h=`<defs><pattern id="g" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="var(--line)"/></pattern></defs><rect width="${W}" height="${H}" fill="url(#g)"/>`;
+ edges.forEach(([a,b],i)=>{const[x1,y1]=P(N[a]),[x2,y2]=P(N[b]),mx=(x1+x2)/2;
+  h+=`<path id="e${i}" data-a="${a}" data-b="${b}" class="edge" d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}" fill="none" stroke="var(--line)" stroke-width="2"/>`});
+ nodes.forEach(n=>{const[x,y]=P(n);
+  h+=`<g class="node" data-id="${n.id}" tabindex="0" style="cursor:pointer;outline:none"><rect x="${x-nw/2}" y="${y-nh/2+4}" width="${nw}" height="${nh}" rx="10" fill="var(--shadow)"/><rect class="nb" x="${x-nw/2}" y="${y-nh/2}" width="${nw}" height="${nh}" rx="10" fill="${n.hot?'var(--acc)':'var(--node)'}" stroke="${n.hot?'var(--acc)':'var(--line)'}" stroke-width="1.5"/><text x="${x}" y="${y+5}" text-anchor="middle" font-family="Geist,sans-serif" font-size="${sm?11:13}" font-weight="600" fill="${n.hot?'#fff':'var(--ink)'}">${esc(n.l)}</text></g>`});
+ h+='<g id="pk"></g>';svg.innerHTML=h;
+ svg.querySelectorAll('.node').forEach(g=>{const id=g.dataset.id;
+  const on=()=>{svg.querySelectorAll('.edge').forEach(e=>{const hit=e.dataset.a===id||e.dataset.b===id;e.setAttribute('stroke',hit?'var(--acc)':'var(--line)');e.setAttribute('stroke-width',hit?3:2)});
+   g.querySelector('.nb').setAttribute('stroke','var(--acc)');cap.textContent='> '+N[id].d};
+  const off=()=>{svg.querySelectorAll('.edge').forEach(e=>{e.setAttribute('stroke','var(--line)');e.setAttribute('stroke-width',2)});
+   g.querySelector('.nb').setAttribute('stroke',N[id].hot?'var(--acc)':'var(--line)');cap.textContent='system.status: all services healthy'};
+  g.addEventListener('mouseenter',on);g.addEventListener('focus',on);g.addEventListener('click',on);g.addEventListener('mouseleave',off);g.addEventListener('blur',off)})};
+const meshRO=new ResizeObserver(draw);meshRO.observe(svg);
+/* travelling packets */
+const spawn=()=>{const i=Math.floor(Math.random()*edges.length);pk.push({i,t:0,s:.006+Math.random()*.008})};
+const loop=()=>{const g=svg.querySelector('#pk');if(g){
+  if(pk.length<9&&Math.random()<.06)spawn();
+  let h='';pk=pk.filter(p=>{p.t+=p.s;if(p.t>=1)return false;const e=svg.querySelector('#e'+p.i);if(!e)return false;
+   const L=e.getTotalLength(),pt=e.getPointAtLength(L*p.t);h+=`<circle cx="${pt.x}" cy="${pt.y}" r="4" fill="var(--acc)" opacity="${Math.sin(p.t*Math.PI)}"/>`;return true});
+  g.innerHTML=h}
+ requestAnimationFrame(loop)};
+if(!reduce)requestAnimationFrame(loop);
+
+/* stats count-up */
+const countIO=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const b=en.target,n=+b.dataset.n;let v=0;
+ const st=()=>{v++;b.textContent=v+(v===n&&n===7?'+':'');if(v<n)setTimeout(st,reduce?0:900/n)};st();countIO.unobserve(b)}),{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(b=>countIO.observe(b));
+
+/* career scale */
+const jobs=[
+ {co:'Sonic Healthcare',t:'Java Developer',loc:'Richardson, TX',from:2018+2/12,to:2019+12/12,dates:'Mar 2018 – Dec 2019',
+  tech:['Spring MVC','Hibernate/JPA','Spring Batch','SOAP','MySQL','jQuery','Tomcat'],
+  groups:[['Delivery',['Built web applications with Spring MVC, Spring IoC, Hibernate/JPA, and the DAO and Session Facade patterns.','Built batch processes with Spring Batch and SOAP web services.','Wrote complex MySQL queries, joins, and stored procedures.','Built dynamic user interfaces with JavaScript, jQuery, AJAX, and JSON.','Managed builds and continuous integration with Maven and Jenkins, and deployments on Apache Tomcat.']]]},
+ {co:'Mastercard',t:'Full Stack Java Developer',loc:'St. Louis, MO',from:2020,to:2020+10/12,dates:'Jan 2020 – Oct 2020',
+  tech:['Spring Boot','Spring Security','Azure','PCF','AWS','Splunk','JMeter'],
+  groups:[['Delivery',['Built Spring Boot microservices and RESTful CRUD APIs, secured with Spring Security.','Migrated application deployments from Pivotal Cloud Foundry to Azure and configured microservices from DEV through PROD.','Deployed services on AWS (EC2, S3, Lambda, SQS, Kinesis, Elastic Beanstalk).','Automated unit tests with JUnit, Mockito, and SonarQube in Jenkins pipelines, and ran JMeter load tests.','Built Splunk searches, alerts, and scheduled reports; moved data from relational SQL databases to MongoDB.','Built UI features with Angular, HTML5, CSS, and JavaScript, plus Express REST APIs.']]]},
+ {co:'AT&T',t:'Full Stack Java Developer',loc:'Richardson, TX',from:2020+10/12,to:2022,dates:'Nov 2020 – Jan 2022',
+  tech:['Spring Boot','AngularJS','Spring AOP','Oracle','MongoDB','Veracode','Kubernetes'],
+  groups:[['Delivery',['Designed and built scalable, fault-tolerant Spring Boot microservices and REST APIs used by multiple applications across the organization.','Built single-page applications with AngularJS, JavaScript, HTML, and CSS.','Implemented Spring AOP authentication at the API level, cutting the development time needed for exception handling.','Fixed multithreading performance problems and throttled downstream API calls, removing hung threads from the application server.','Designed schemas for Oracle, MySQL and MongoDB; fixed vulnerabilities found by Veracode SAST scans.','Automated builds with Maven and Jenkins CI, and supported production Kubernetes pods, logs, and defect fixes.']]]},
+ {co:'Accurate Background',t:'Senior Software Engineer',loc:'Irvine, CA · remote',from:2022,to:2026+11/12,dates:'Jan 2022 – Present',
+  tech:['Spring Boot','Angular','Generative AI','MCP','Kubernetes','Datadog','MongoDB','AWS S3'],
+  groups:[['Generative AI and MCP',['Led AI-assisted development on the team, using prompt engineering and generative AI to speed up design, coding, testing, and documentation.','Greenfield: scaffolded new microservices from requirements with AI — API contracts, data models, service layers, and unit tests.','Brownfield: modernized older modules by refactoring to modern Java patterns, generating regression tests before changes.','Built and configured MCP servers connecting AI assistants to repositories, documentation, databases, and ticketing tools.']],
+   ['Platform engineering',['Design, build, and maintain Spring Boot microservices that power high-volume background-check workflows.','Automated Jenkins build, test, and deploy pipelines; run containerized services on Kubernetes (Rancher).','Monitor with Datadog and Kibana; manage data in MongoDB and SQL with AWS S3 for document storage.','Review code, mentor junior engineers, and take part in sprint planning and retrospectives.']]]}];
+const Y0=2018,Y1=2027,span=Y1-Y0,track=$('#track'),ptr=$('#pointer');
+$('#ticks').innerHTML=Array.from({length:span},(_,i)=>`<span>${Y0+i}</span>`).join('');
+jobs.forEach((j,i)=>{const b=document.createElement('button');b.className='seg';b.type='button';b.id='seg'+i;
+ b.style.left=((j.from-Y0)/span*100)+'%';b.style.width='calc('+((j.to-j.from)/span*100)+'% - 3px)';
+ b.textContent=j.co;b.setAttribute('aria-label',j.co+', '+j.dates);b.addEventListener('click',()=>pick(i));track.appendChild(b)});
+let cur=jobs.length-1;
+const pick=i=>{cur=(i+jobs.length)%jobs.length;const j=jobs[cur];
+ document.querySelectorAll('.seg').forEach((s,k)=>s.classList.toggle('on',k===cur));
+ ptr.style.left=((j.from+j.to)/2-Y0)/span*100+'%';
+ $('#readout').innerHTML=`<div><div class="co">${esc(j.co)}</div><div class="meta"><span class="ttl">${esc(j.t)}</span><br>${esc(j.loc)} · <span class="mono">${esc(j.dates)}</span></div><div class="pills">${j.tech.map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+  <div class="navbtns"><button class="btn" type="button" id="prev" aria-label="Previous role">← Earlier</button><button class="btn" type="button" id="next" aria-label="Next role">Later →</button></div></div>
+  <div>${j.groups.map(([h,l])=>`<h3>${esc(h)}</h3><ul>${l.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}</div>`;
+ $('#prev').addEventListener('click',()=>pick(cur-1));$('#next').addEventListener('click',()=>pick(cur+1))};
+pick(cur);
+$('#scale').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){pick(cur-1);$('#seg'+cur).focus()}if(e.key==='ArrowRight'){pick(cur+1);$('#seg'+cur).focus()}});
+
+/* AI cards */
+const ico=p=>`<svg viewBox="0 0 36 36" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const ai=[
+ [ico('<rect x="5" y="7" width="26" height="22" rx="4"/><path d="M11 15l4 3-4 3M18 22h7"/>'),'Greenfield, faster','Scaffold new microservices from requirements — API contracts, data models, service layers and unit tests.'],
+ [ico('<path d="M8 28V12l10-6 10 6v16"/><path d="M14 28v-8h8v8"/>'),'Brownfield, safely','Analyze older modules, refactor to modern Java, and generate regression tests before anything changes.'],
+ [ico('<circle cx="9" cy="18" r="4"/><circle cx="27" cy="9" r="4"/><circle cx="27" cy="27" r="4"/><path d="M13 16l10-5M13 20l10 5"/>'),'MCP integrations','Model Context Protocol servers that give AI assistants context from repos, docs, databases and tickets.'],
+ [ico('<path d="M18 5l11 5v8c0 7-5 11-11 13-6-2-11-6-11-13v-8z"/><path d="M13 18l4 4 6-7"/>'),'Team standards','Reusable prompt templates and guidelines for AI-generated code review, security checks and test coverage.']];
+$('#aiCards').innerHTML=ai.map(([i,h,p])=>`<div class="card">${i}<h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('');
+
+/* skills */
+const skills={
+ 'Generative AI':['Prompt engineering','GitHub Copilot','Claude','ChatGPT','MCP servers','AI code generation','AI refactoring','AI-generated tests & docs'],
+ 'Languages':['Java 8–25','Python','JavaScript','TypeScript','SQL','C++','C'],
+ 'Backend':['Spring Boot','Spring MVC','Spring Security','Spring Data','Spring Batch','Hibernate/JPA','REST','SOAP','JMS','Microservices'],
+ 'Frontend':['Angular','AngularJS','HTML5','CSS','jQuery','AJAX','Bootstrap','Node.js','Express'],
+ 'Cloud & DevOps':['AWS EC2','AWS S3','AWS RDS','AWS Lambda','AWS SQS','AWS Kinesis','Redshift','CloudWatch','Elastic Beanstalk','CodeCommit','Azure','Pivotal Cloud Foundry','Docker','Kubernetes','Rancher','Jenkins','Maven'],
+ 'Databases':['Oracle','MySQL','SQL Server','MongoDB','PL/SQL','T-SQL'],
+ 'Monitoring & Testing':['Datadog','Kibana','Splunk','Log4j','JUnit','Mockito','JMeter','SonarQube','Veracode SAST'],
+ 'Practices':['Agile/Scrum','CI/CD','Code review','Design patterns','Git','Jira','Rally','Linux/Unix']};
+const all=Object.entries(skills).flatMap(([a,l])=>l.map(s=>({a,s})));
+let area='All';
+const chips=['All',...Object.keys(skills)];
+const renderChips=()=>{$('#chips').innerHTML=chips.map(c=>`<button type="button" class="chip${c===area?' on':''}" data-c="${esc(c)}" aria-pressed="${c===area}">${esc(c)}<small>${c==='All'?all.length:skills[c].length}</small></button>`).join('')};
+const renderCloud=()=>{const q=$('#q').value.trim().toLowerCase();
+ const list=all.filter(x=>(area==='All'||x.a===area)&&(!q||x.s.toLowerCase().includes(q)||x.a.toLowerCase().includes(q)));
+ $('#cloud').innerHTML=list.length?list.map((x,i)=>`<span class="sk" style="animation-delay:${Math.min(i*18,400)}ms">${esc(x.s)}${area==='All'?`<em>${esc(x.a)}</em>`:''}</span>`).join(''):`<span class="sk">No match for “${esc(q)}” — try another term.</span>`};
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;area=b.dataset.c;renderChips();renderCloud()});
+$('#q').addEventListener('input',renderCloud);
+renderChips();renderCloud();
+
+/* copy email */
+$('#copyBtn').addEventListener('click',async e=>{const b=e.currentTarget;
+ try{await navigator.clipboard.writeText('ybhatta.ai@gmail.com');b.textContent='Copied ✓'}catch(err){b.textContent='Select & copy above'}
+ setTimeout(()=>b.textContent='Copy email',2000)});
+
+/* reveal + active nav */
+const revIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');revIO.unobserve(en.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revIO.observe(el));
+const navIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>navIO.observe(s));
+}
+</script>
+</body>
+</html>
